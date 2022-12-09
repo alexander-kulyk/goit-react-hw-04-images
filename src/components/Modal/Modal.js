@@ -8,6 +8,7 @@ import { Overlay, ModalBody, Img } from "./Modal.styled";
 export const Modal = ({url, tags,toggle}) =>{
     
     
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handeleKeyDown  = e =>{
         if (e.code === 'Escape') {
             console.log('Escape')
