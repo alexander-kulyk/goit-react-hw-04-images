@@ -107,7 +107,7 @@ export const App = () =>{
 
     const toggle = () =>{
       console.log('qwerty');
-      setVisible(true)
+      setVisible(ps => !ps);
     }
 
 
@@ -126,14 +126,14 @@ export const App = () =>{
         {status === 'rejected' && <p style={{color: 'red',  textAlign: "center"}}>{error?.message}! Try again!</p>}
         {loading && <Loader/>}
         {images.length > 0 && <ButtonLoadMore disabled={loading} onClickBtn ={onClickLoadMoreBtn} />}
-        {visible && <Modal  url ={largeImageURL} tags={tags} toggle ={this.toggle}/>}
+        {visible && selectedItem !== {}  && <Modal url = {largeImageURL} tags={tags}  toggle ={toggle}/>}
         <ToastContainer autoClose={3000}/>
       </div>
     );
 
 
 
-
+//url ={largeImageURL} tags={tags}
 
 
 }
