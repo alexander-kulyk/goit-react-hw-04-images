@@ -9,13 +9,10 @@ export const Modal = ({url, tags,toggle}) =>{
     
     
     
-    
-    
     useEffect(() => {
 
         const handeleKeyDown  = e =>{
             if (e.code === 'Escape') {
-                console.log('Escape')
                 toggle(); 
             }
         };
